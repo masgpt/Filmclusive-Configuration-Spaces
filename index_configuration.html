@@ -1,0 +1,125 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Space Settings</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="config-container">
+        <h1>Space Settings</h1>
+        
+        <div class="form-group">
+            <label for="space-select">Select a Space</label>
+            <select id="space-select" class="form-control" onchange="showSettings()">
+                <option value="" disabled selected>Select a space...</option>
+                <option value="listing">Listing</option>
+                <option value="access">Access</option>
+                <option value="layout">Layout & Conversion</option>
+                <option value="design">Design Customization</option>
+            </select>
+        </div>
+
+        <div id="settings-container">
+            <div id="listing" class="settings-content">
+                <div class="settings-grid">
+                    <div class="form-group">
+                        <label for="space-name">Space Name</label>
+                        <input type="text" id="space-name" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label for="space-description">Description</label>
+                        <textarea id="space-description" class="form-control"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="space-type">Space Type</label>
+                        <select id="space-type" class="form-control">
+                            <!-- Options for space types -->
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="listing-category">Listing Category</label>
+                        <input type="text" id="listing-category" class="form-control">
+                    </div>
+                </div>
+            </div>
+
+            <div id="access" class="settings-content">
+                <div class="settings-grid">
+                    <div class="form-group">
+                        <label for="view-access">Who can view this space?</label>
+                        <select id="view-access" class="form-control">
+                            <!-- Access options -->
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="interact-access">Who can interact with this space?</label>
+                        <select id="interact-access" class="form-control">
+                            <!-- Interaction options -->
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="admin-access">Who can edit or delete items?</label>
+                        <select id="admin-access" class="form-control">
+                            <!-- Admin options -->
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="invite-access">Who can invite others?</label>
+                        <select id="invite-access" class="form-control">
+                            <!-- Invite options -->
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <div id="layout" class="settings-content">
+                <div class="settings-grid">
+                    <div class="form-group full-width">
+                        <label for="content-editor">Custom Content</label>
+                        <div id="content-editor" class="rich-text-editor">
+                            <!-- Rich text editor integration -->
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="layout-type">Layout Type</label>
+                        <select id="layout-type" class="form-control">
+                            <!-- Layout options -->
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="conversion-goal">Conversion Goal</label>
+                        <input type="text" id="conversion-goal" class="form-control">
+                    </div>
+                </div>
+            </div>
+
+            <div id="design" class="settings-content">
+                <div class="settings-grid">
+                    <div class="form-group">
+                        <label for="space-icon">Space Icon</label>
+                        <input type="file" id="space-icon" class="form-control-file">
+                    </div>
+                    <div class="form-group">
+                        <label for="color-scheme">Color Scheme</label>
+                        <select id="color-scheme" class="form-control">
+                            <!-- Color scheme options -->
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="custom-css">Custom CSS</label>
+                        <textarea id="custom-css" class="form-control"></textarea>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <button class="btn btn-danger" onclick="deleteSpace()">Delete Space</button>
+        <button class="btn btn-primary" onclick="saveSpaceSettings()">Save Settings</button>
+    </div>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
